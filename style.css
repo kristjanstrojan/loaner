@@ -1,0 +1,36 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background: #eeeeee;
+}
+
+main {
+	background: #fff;
+	max-width: 1000px;
+	border: 1px solid #dedede;
+	margin: 100px auto;
+	padding:20px;
+	overflow: hidden;
+	clear:both;
+}
+
+.col50 {
+	float:left;
+	width: 50%;
+	padding: 30px;
+}
+
+data-group {
+	padding-bottom: 40px;
+	display: block;
+}
+
+label{
+	padding: 10px 0;
+	display: block;
+}
+
+.valueLabel{
+	padding:10px 0 0;
+}

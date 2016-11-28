@@ -1,0 +1,56 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Študentska posojila</title>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+<main>
+	<div class="col50">
+		<h2>Informativni izračun kredita</h2>
+		<data-group>
+			<label>Koliko denarja potrebujete?</label>
+			<div id="visinaKredita"></div>
+			<div id="kreditVrednost" class="valueLabel"></div>
+		</data-group>
+		<data-group>
+			<label>V kolikem času boste odplačali posojilo?</label>
+			<div id="dobaOdplacila"></div>
+			<div id="dobaOdplacilaVrednost" class="valueLabel"></div>
+		</data-group>
+		<data-group>
+    			<label>Posojilo potrebujem za:</label>
+    			<label for="radio-1">Dodiplomski študij</label>
+    			<input type="radio" name="radio-1" id="radio-1" class="studij">
+    			<label for="radio-2">Podiplomski študij</label>
+    			<input type="radio" name="radio-1" id="radio-2" class="studij">
+  			</fieldset>	
+		</data-group>
+		<data-group>
+			<label>Kreditna sposobnost:</label>
+    		<label for="sposobnost-1">Dobra</label>
+    		<input type="radio" name="sposobnost-1" id="sposobnost-1" class="sposobnost">
+    		<label for="sposobnost-2">Povprečna</label>
+    		<input type="radio" name="sposobnost-2" id="sposobnost-2" class="sposobnost">
+    		<label for="sposobnost-3">Slaba</label>
+    		<input type="radio" name="sposobnost-3" id="sposobnost-3" class="sposobnost">
+		</data-group>
+	</div>
+	<div class="col50">
+
+	</div>	
+</main>	
+
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>
