@@ -239,11 +239,27 @@ function calc(arg) {
 
     }
 
-    $("#mesecnoStudij").html(pmt_in_study+" €");
-    $("#mesecnoStudijObresti").html(parseFloat(in_study_rate.toFixed(3))+" €");
-    $("#mesecnoPoStudiju").html(parseFloat(pmt_post_study.toFixed(2))+" €");
-    $("#mesecnoPoStudijuObresti").html(parseFloat(post_study_rate.toFixed(3))+" €");
-    $("#skupnoVracilo").html(parseFloat(paid_all.toFixed(2))+" €");
+    // Settings object that controls default parameters for library methods:
+    accounting.settings = {
+	      currency: {
+		        symbol : "€",   // default currency symbol is '$'
+		        format: "%v %s", // controls output: %s = symbol, %v = value/number (can be object: see below)
+		        decimal : ",",  // decimal point separator
+		        thousand: ".",  // thousands separator
+		        precision : 2   // decimal places
+	      },
+	      number: {
+		        precision : 0,  // default precision on numbers is 0
+		        thousand: ".",
+		        decimal : ","
+	      }
+    }
+
+    $("#mesecnoStudij").html(accounting.formatMoney(pmt_in_study));
+    $("#mesecnoStudijObresti").html(parseFloat(in_study_rate.toFixed(3))+" %");
+    $("#mesecnoPoStudiju").html(accounting.formatMoney(parseFloat(pmt_post_study.toFixed(2))));
+    $("#mesecnoPoStudijuObresti").html(parseFloat(post_study_rate.toFixed(3))+" %");
+    $("#skupnoVracilo").html(accounting.formatMoney(parseFloat(paid_all.toFixed(2))));
     $("#obrestnaMera").html((parseFloat(Apr.toFixed(4))*100).toFixed(2)+" %");
 
 

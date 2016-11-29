@@ -4,28 +4,39 @@
     <head>
 	      <meta charset="utf-8">
 	      <title>Študentska posojila</title>
-	      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	      <link rel="stylesheet" href="jqueryui.css">
 	      <link rel="stylesheet" type="text/css" href="style.css">
 
     </head>
     <body>
-
+        <div class="cont">
+            <img src="http://www.sklad05.si/sklad05/static/images/logo.png">
+        </div>
         <main>
-            
+
             <div class="col100">
-                <h1>Predog produkta študentskih posojil za sofinanciranje študija v tujini</h1>
+                <h1>Predog produkta študentskih posojil<br/>za sofinanciranje študija v tujini</h1>
                 <div class="content cols">
                     <h4>Opis produkta</h4>
                     <p>
                         Financiranje študija v tujini je za mnoge študente in njihove družine velik finančni zalogaj.
                         Študentje si težko privoščjio študij v tujini, predvsem v primerih, ko imajo univerze relativno visoke šolnine.
                     </p>
-                    <p></p>
+                    <p>
+                        Študentje bi morali <strong>predvsem študirati</strong> in se ne obremenjevati s financami v času študija. Naš produkt predstavlja enostavno in hitro storitev, ki študentom olajša pridobitev kredita.
+                    </p>
+                    <h4>Način odplačevanja</h4>
+                    <p>
+                        Med študijem so vračila omejena na minimalno 5€ in 75 € na mesec. Ta omejitev velja še za tri mesece po končanju študija in se na to poveča na redno odplačevanje obrokov.
+                    </p>
+
                 </div>
 
             </div>
+            <div class="col100">
+                <h2>Informativni izračun kredita</h2>
+            </div>
             <div class="col50">
-		            <h2>Informativni izračun kredita</h2>
 		            <data-group>
 			              <label>Koliko denarja potrebujete?</label>
 			              <div id="visinaKredita"></div>
@@ -82,6 +93,7 @@
 
         <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="accounting.min.js"></script>
         <script type="text/javascript" src="app.js"></script>
 
     </body>

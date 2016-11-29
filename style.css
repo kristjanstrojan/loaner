@@ -11,19 +11,51 @@ body {
 	background: #eeeeee;
 }
 
+strong, b {
+    font-weight:700;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
     font-weight:700;
+    color: #00497b;
+}
+
+p{
+    margin-top:3px;
+}
+
+h1 {
+    padding-bottom:20px;
+}
+
+h4 {
+    font-size:18px;
+    margin-bottom:0;
+
 }
 
 main {
 	background: #fff;
 	max-width: 1000px;
 	border: 1px solid #dedede;
-	margin: 100px auto;
+	margin: 20px auto 20px;
 	padding:20px;
 	overflow: hidden;
 	clear:both;
+}
+
+.cont {
+    top:0;
+    display:block;
+    position:relative;
+    max-width: 1000px;
+    margin:20px auto;
+}
+
+.cont img {
+    height:120px;
+    width:auto;
 }
 
 .col100 {
@@ -59,13 +91,17 @@ label{
 
 .grey {
     background: #F1F4F2;
-    padding: 29px 25px 21px;
+    padding: 15px 25px 15px;
+}
+
+.grey table {
+    width: 100%;
 }
 
 .grey table tr td {
     border-top: 2px solid #E8ECEA;
     line-height: 45px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .td-value {
