@@ -1,8 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:400,400i,500,500i,700,700i&subset=latin-ext');
+
+
 * {
-	box-sizing: border-box;
+	  box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
+    font-weight:400;
 }
 body {
 	background: #eeeeee;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+    font-weight:700;
 }
 
 main {
@@ -15,10 +26,20 @@ main {
 	clear:both;
 }
 
+.col100 {
+	  padding: 30px;
+}
+
+
 .col50 {
 	float:left;
 	width: 50%;
 	padding: 30px;
+}
+
+
+.content.cols {
+    columns:2;
 }
 
 data-group {
@@ -33,4 +54,20 @@ label{
 
 .valueLabel{
 	padding:10px 0 0;
+}
+
+
+.grey {
+    background: #F1F4F2;
+    padding: 29px 25px 21px;
+}
+
+.grey table tr td {
+    border-top: 2px solid #E8ECEA;
+    line-height: 45px;
+    font-size: 14px;
+}
+
+.td-value {
+    text-align: right;
 }
