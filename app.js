@@ -6,8 +6,11 @@ var apr;
 
 $(document).ready(function() {
 
+    $('#undergrad').prop('checked', true);
+    $("#ok").prop('checked', true);
     $("#kreditVrednost").html("500 €");
     $("#dobaOdplacilaVrednost").html("1 leto");
+    getValues();
     $("#visinaKredita").slider({
         value: 500,
         min: 500,
