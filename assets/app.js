@@ -3,9 +3,15 @@ var studyType = 'undegraduate';
 var creditQuality = 'ok';
 var loanTerm = 1;
 var apr;
+var baseRate = 0.099;
 
 $(document).ready(function() {
+    //admin
 
+    $(".admin").hide();
+
+    $("#baseRate").val(9.9);
+    // public
     $('#undergrad').prop('checked', true);
     $("#ok").prop('checked', true);
     $("#kreditVrednost").html("500 €");
@@ -55,17 +61,19 @@ $(document).ready(function() {
         getValues();
     });
 
-
-
-
+    $("#baseRate").on("input", function() {
+        baseRate = ($("#baseRate").val())/100;
+        console.log(baseRate);
+        getValues();
+    })
 
 });
 
+function toggleAdmin(e) {
+    $(".admin").toggle();
+}
+
 function getValues() {
-    console.log(amountBorrowed);
-    console.log(loanTerm);
-    console.log(studyType);
-    console.log(creditQuality);
     calc({
         'studyType': studyType,
         'loanTerm': loanTerm,
@@ -91,7 +99,7 @@ function calc(arg) {
     // hidden system input (constants)
     var MONTHS_TO_GRAD = arg.monthToGrad || 9,
         MONTHS_GRACE = 3,
-        BASE_RATE = 0.099, // used to be 0.1
+        BASE_RATE = baseRate, // used to be 0.1
         RATE_DIFF_IN_STUDY = 0.02,
         IN_STUDY_PMNT_PERCENT = 0.75,
         IN_STUDY_PMNT_ROUND = 5,
